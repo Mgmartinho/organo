@@ -1,7 +1,7 @@
 import "./Formulario.css"
 import TextForm from "../Form";
 import ListaSuspensa from "../ListaSuspensa";
-import Buttom from "../../ButtomForms";
+import Buttom from "../ButtomForms";
 
 const BodyFormulario = () => {
 
@@ -15,14 +15,21 @@ const BodyFormulario = () => {
         'Mobile',
     ];
 
+    const salvar =(e) => {
+        e.preventDefault()
+        console.log("Salvou")
+    }
+
+
+
     return (
         <section className="formulario">
-            <form>
+            <form onSubmit={salvar}>
                 <h2>Preencha o formulário para criar o card!</h2>
-                <TextForm label="Nome" placeholder="Digite o nome" />
-                <TextForm label="Cargo" placeholder="Digite o Cargo" />
+                <TextForm obrigatorio={true} label="Nome" placeholder="Digite o nome" />
+                <TextForm obrigatorio={true} label="Cargo" placeholder="Digite o Cargo" />
                 <TextForm label="Image" placeholder="Carregue a imagem ou digite a URL" />
-                <ListaSuspensa label="Time" itens={times}/>
+                <ListaSuspensa obrigatorio={true} label="Time" itens={times}/>
                 <Buttom>
                     Criar Card
                 </Buttom>

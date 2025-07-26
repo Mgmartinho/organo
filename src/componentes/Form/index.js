@@ -7,7 +7,7 @@ const TextForm = (Props) => {
     return (
         <div className="campo-texto">
             <label>{Props.label}</label>
-            <input placeholder={placeholderModificada} />
+            <input required={Props.obrigatorio} placeholder={placeholderModificada} />
             
         </div>
     )
