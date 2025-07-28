@@ -4,10 +4,14 @@ const TextForm = (Props) => {
 
     const placeholderModificada =`${Props.placeholder}...`
 
+    const digitado = (e) => {
+        Props.alterado(e.target.value)
+    }
+
     return (
         <div className="campo-texto">
             <label>{Props.label}</label>
-            <input required={Props.obrigatorio} placeholder={placeholderModificada} />
+            <input value={Props.valor} onChange={digitado} required={Props.obrigatorio} placeholder={placeholderModificada} />
             
         </div>
     )
