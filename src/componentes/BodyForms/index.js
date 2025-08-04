@@ -6,15 +6,7 @@ import { useState } from "react";
 
 const BodyFormulario = (props) => {
 
-    const times = [
-        '',
-        'Programação',
-        'Front-End',
-        'Data-Scienc',
-        'Devops',
-        'UX Design',
-        'Mobile',
-    ];
+ 
 
     const salvar = (e) => {
         e.preventDefault()
@@ -60,7 +52,7 @@ const BodyFormulario = (props) => {
                 <ListaSuspensa
                     obrigatorio={true}
                     label="Time"
-                    itens={times}
+                    itens={props.times}
                     valor={time}
                     alterado={valor => setTime(valor)}
                 />
