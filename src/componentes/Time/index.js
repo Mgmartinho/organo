@@ -6,6 +6,7 @@ const Time = (props) => {
     const corSec = { backgroundColor: props.corSecundaria }
 
     return (
+        (props.colaboradores.length) > 0 &&
         <section className="time" style={corSec}>
             <h3 style={{ borderColor: props.corPrimaria }}>{props.nome}</h3>
             
@@ -16,11 +17,11 @@ const Time = (props) => {
                         nome={colaborador.nome}
                         cargo={colaborador.cargo}
                         imagem={colaborador.imagem}
+                        corDeFundo={props.corPrimaria}
                     />
 
                 )}
             </div>
-
         </section>
     )
 }

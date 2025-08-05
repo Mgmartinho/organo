@@ -16,6 +16,10 @@ const BodyFormulario = (props) => {
             imagem,
             time,
         })
+        setNome("");
+        setCargo("");
+        setImagem("");
+        setTime("");       
     }
 
 
